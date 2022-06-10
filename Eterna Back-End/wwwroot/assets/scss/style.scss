@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#topbar{
+   
+    height: 40px;
+    background-color: #545454;
+
+    h1{
+        font-size: 20px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bolder;
+    }
+    .container{
+        
+
+        .contacts ul{
+            padding-left: 0;
+        }
+        .contacts ul li{
+            list-style: none;
+            margin: 0px;
+
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 12px;
+            }
+        }
+
+        .icons ul li{
+            list-style: none;
+            margin: 5px;
+
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+#navbar{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    
+    .container{
+       
+
+        .navbar-box{
+            height: 50px;
+        }
+        .logo{
+           
+            .red{
+                width: 5px;
+                height: 18px;
+                background-color: #e96b56;;
+            }
+            .logos h1{
+                font-size: 20px;
+            }
+        }
+        
+        .services {
+            height: 40px;
+        }
+        .services ul{
+            padding-left: 0%;
+
+            li{
+                margin: 5px;
+                list-style: none;
+                font-size: 13px;
+
+                a{
+                    text-decoration: none;
+                    color: black;
+                    transition: 1s;
+
+                    &:hover{
+                        color: #e96b56;
+                        transition: 1s;
+                    }
+                }
+            }
+        }
+    }
+}
+#home{
+    
+    height: 100px;
+    background-color: whitesmoke;
+
+    .container{
+       
+
+        .locaction{
+          height: 30px;
+          margin-top: 16px;
+          p:first-child{
+            font-size: 12px;
+          }
+            p:last-child{
+                font-size: 25px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+#card{
+    .container{
+       
+        .cart{
+            
+            
+            flex-wrap: wrap;
+
+            .cards{
+                
+                .property{
+                    width: 100%;
+                    padding: 50px;
+                    margin-top: 25px;
+                    border: 1px solid wheat;
+
+                    i{
+                        width: 50px;
+                        height: 50px;
+                        background-color: #e96b56;
+                        border-radius: 5px;
+                        padding: 15px;
+                        font-size: 20px;
+                        box-shadow: -6px -6px 1px 1px whitesmoke;
+                        color: white;
+                    }
+                       
+                    .bold{
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: #545454;
+                    }
+                    
+                    &:hover{
+                        background-color: #e96b56;
+                        transition: 1s;
+    
+                        i{
+                            background-color: white;
+                            box-shadow: -6px -6px 1px 1px whitesmoke;
+                            transition: 1s;
+                            color: #e96b56;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#statistic{
+
+    .container{
+
+        .skills{
+            strong{
+                font-size: 30px;
+            }
+
+            .line{
+                width: 45px;
+                height: 2px;
+                background-color: red;
+                margin: 0px auto;
+            }
+        }
+
+        .staticAndDesc{
+            
+            .statistics-box{
+                
+
+                .image{
+    
+                    img{
+                        width: 100%;
+                        height: 350px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+#subscribe{
+    background-color: rgb(64, 64, 64);
+
+    .container{
+
+        
+        .box{
+            flex-wrap: wrap;
+            .description{
+                h4{
+                    font-size: 24px;
+                    margin: 0px 0px 20px;
+                    padding: 0px;
+                    line-height: 1;
+                    font-weight: 600;
+                    font-family: Raleway, sans-serif;
+                }
+            }
+    
+            .login{
+                
+                background-color: white;
+                height: 40px;
+                border-radius: 40px;
+                margin: auto 0px;
+    
+                .label{
+                    height: 40px;
+                    
+                    input{
+                        width: 70%;
+                        margin: 0px auto;
+                        border: none;
+                    }
+    
+                    button{
+                        border: none;
+                        border-radius: 40px;
+                        background-color: #e96b56;
+                        transition: 1s;
+                        height: 40px;
+
+                        &:hover{
+                            background-color: red;
+                            transition: 1s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background-color: rgb(59, 59, 59);
+
+    .container{
+
+        .useful{
+            margin: 0px auto;
+            
+            ul{
+                padding-left: 0;
+                li{
+                    list-style: none;
+                    font-size: 12px;
+                    margin-top: 10px;
+
+                    .fa-chevron-right{
+                        font-size: 10px;
+                        color: #e96b56;
+                    }
+
+                    a{
+                        text-decoration: none;
+                        color: white;
+                    }
+                    span{
+                        margin: 3px;
+                    }
+                }
+            }
+        }
+
+        .socalmedia{
+           
+            i{
+                width: 30px;
+                height: 30px;
+                background-color: rgb(84, 84, 84);
+                border-radius: 50%;
+                padding: 10px;
+                font-size: 10px;
+                transition: .5s;
+
+                &:hover{
+                    background-color: #e96b56;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+
+    .endl{
+        width: 100%;
+        height: 100px;
+        background-color: rgb(64, 64, 64);
+
+        span{
+            font-size: 12px;
+            line-height: 4;
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    .bars{
+        display: none;
+    }
+}
+@media (max-width: 992px) {
+
+    .services{
+        display: none;
+    }
+}
+
+@media (max-width: 730px){
+    #topbar{
+        width: 100%;
+      }
+
+        .navbar-box-up{
+            width: 100%;
+
+           
+            .icons{
+                display: none;
+            }
+        }
+        .staticAndDesc{
+            width: 100%;
+            
+            .statistics-box{
+                
+                flex-wrap: wrap;
+                image{
+                    width: 100%;
+                }
+                .progressive{
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+    
+   
+
+@media (max-width: 600px)  {
+    #topbar{
+        width: 100%;
+      
+
+        .navbar-box-up{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 350px)  {
+    #topbar{
+        width: 100%;
+
+        .navbar-box-up{
+            width: 100%;
+        }
+    }
+    #navbar{
+        .container{
+            width: 100%;
+        }
+    }
+    .staticAndDesc{
+        width: 100%;
+        
+        .statistics-box{
+
+            .image{
+                width: 100%;
+            }
+            .progressive{
+                width: 100%;
+            }
+        }
+    }
+}
