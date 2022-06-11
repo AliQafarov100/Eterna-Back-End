@@ -6,6 +6,46 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap-utilities.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap-utilities.min.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap.rtl.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\css\bootstrap.rtl.min.css.map" />
+    <None Include="wwwroot\assets\Bootstrap\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\assets\Bootstrap\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\assets\Bootstrap\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\assets\Bootstrap\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\assets\Bootstrap\js\bootstrap.esm.js" />
+    <None Include="wwwroot\assets\Bootstrap\js\bootstrap.esm.js.map" />
+    <None Include="wwwroot\assets\Bootstrap\js\bootstrap.esm.min.js" />
+    <None Include="wwwroot\assets\Bootstrap\js\bootstrap.esm.min.js.map" />
+    <None Include="wwwroot\assets\Bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\assets\Bootstrap\js\bootstrap.js.map" />
+    <None Include="wwwroot\assets\Bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\Bootstrap\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\assets\Js\script.js" />
+    <None Include="wwwroot\assets\scss\css\style.css.map" />
+    <None Include="wwwroot\assets\scss\style.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.25" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.25" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.25">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 

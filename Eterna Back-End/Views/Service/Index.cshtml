@@ -1,4 +1,4 @@
-﻿
+﻿@model ServiceVM
 @{
     ViewData["Title"] = "Index";
 }
@@ -17,48 +17,16 @@
     <section id="card">
         <div class="container">
             <div class="cart row justify-content-between  mt-5 text-center">
-                <div class="cards col-lg-4 col-md-6 col-sm-12">
-                    <div class="property">
-                        <i class="fa-solid fa-basketball"></i>
-                        <p class="bold mt-3">Lorem Ipsum</p>
-                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                @foreach (Card card in Model.Cards)
+                {
+                    <div class="cards col-lg-4 col-md-6 col-sm-12">
+                        <div class="property">
+                            <i class="@card.Icon"></i>
+                            <p class="bold mt-3">@card.Title</p>
+                            <p>@card.SubTitle</p>
+                        </div>
                     </div>
-                </div>
-                <div class="cards col-lg-4 col-md-6 col-sm-12">
-                    <div class="property">
-                        <i class="fa-solid fa-file-lines"></i>
-                        <p class="bold mt-3">Sed ut perspiciatis</p>
-                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                    </div>
-                </div>
-                <div class="cards col-lg-4 col-md-6 col-sm-12">
-                    <div class="property">
-                        <i class="fa-solid fa-gauge"></i>
-                        <p class="bold mt-3">Magni Dolores</p>
-                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                    </div>
-                </div>
-                <div class="cards col-lg-4 col-md-6 col-sm-12">
-                    <div class="property">
-                        <i class="fa-solid fa-earth-africa"></i>
-                        <p class="bold mt-3">Nemo Enim</p>
-                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                    </div>
-                </div>
-                <div class="cards col-lg-4 col-md-6 col-sm-12">
-                    <div class="property">
-                        <i class="fa-solid fa-tv"></i>
-                        <p class="bold mt-3">Dele cardo</p>
-                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                    </div>
-                </div>
-                <div class="cards col-lg-4 col-md-6 col-sm-12">
-                    <div class="property">
-                        <i class="fa-solid fa-archway"></i>
-                        <p class="bold mt-3">Divera don</p>
-                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                    </div>
-                </div>
+                }
             </div>
 
         </div>
@@ -67,67 +35,45 @@
         <div class="container">
             <div class="row">
                 <div class="skills mt-5 text-center">
-                    <strong>Our Skills</strong>
+                    @foreach (Skill skill in Model.Skills)
+                    {
+                        <strong>@skill.Title</strong>
+                    }
                     <div class="line mt-2">
 
                     </div>
                 </div>
                 <div class="staticAndDesc">
-                    <p class="mt-3">
-                        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
-                    </p>
+                    @foreach (Information info in Model.informations)
+                    {
+                        <p class="mt-3">
+                            @info.Info
+                        </p>
+                    }
                     <div class="statistics-box d-flex justify-content-between">
                         <div class="image">
                             <img src="/assets/Image/Skills Image/skills-img.jpg" alt="">
                         </div>
                         <div class="progressive">
                             <strong>Voluptatem dignissimos provident quasi corporis voluptates</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt direna past reda</p>
-                            <div class="write d-flex justify-content-between">
-                                <div>
-                                    <p>HTML</p>
+                            @foreach (AnotherDescription desc in Model.AnotherDescriptions)
+                            {
+                                <p>@desc.Descript</p>
+                            }
+                            @foreach (Progress progress in Model.Progresses)
+                            {
+                                <div class="write d-flex justify-content-between">
+                                    <div>
+                                        <p>@progress.SubjectName</p>
+                                    </div>
+                                    <div>
+                                        <p>@progress.SubjectProgress</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p>100%</p>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: @progress.ProgressValue%" aria-valuenow="@progress.ProgressValueNow" aria-valuemin="@progress.ProgressValueMin" aria-valuemax="@progress.ProgressValueMax"></div>
                                 </div>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="write d-flex justify-content-between">
-                                <div>
-                                    <p>CSS</p>
-                                </div>
-                                <div>
-                                    <p>90%</p>
-                                </div>
-                            </div>
-                            <div class="progress">
-
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="write d-flex justify-content-between">
-                                <div>
-                                    <p>JAVASCRIPT</p>
-                                </div>
-                                <div>
-                                    <p>75%</p>
-                                </div>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="write d-flex justify-content-between">
-                                <div>
-                                    <p>PHOTOSHOP</p>
-                                </div>
-                                <div>
-                                    <p>55%</p>
-                                </div>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
+                            }
                         </div>
                     </div>
                 </div>

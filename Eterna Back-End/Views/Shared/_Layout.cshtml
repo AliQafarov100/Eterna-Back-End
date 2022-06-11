@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@inject Eterna_Back_End.Service.LayoutService layuotservice
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +13,29 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="responsive-menu d-flex justify-content-around">
+        <ul class="">
+            <li><a href="">Home</a> </li>
+            <li><a href="">About</a> </li>
+            <li><a href="">Services</a> </li>
+            <li><a href="">Portfolio</a> </li>
+            <li><a href="">Team</a> </li>
+            <li><a href="">Pricing</a> </li>
+            <li><a href="">Blog</a> </li>
+            <li>
+                <a class="dropdown" href="">
+                    DropDown
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                    </ul>
+                </a>
+            </li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <i class="fa-solid fa-x"></i>
+    </div>
     <header>
         <nav id="topbar">
             <div class="container">
@@ -18,16 +43,16 @@
                     <div class="navbar-box-up d-flex justify-content-between align-items-center">
                         <div class="contacts">
                             <ul class="d-flex justify-content-between col-sm-12 col-12">
-                                <li><a href=""><span><i class="fa-solid fa-envelope text-danger"></i></span><span class="ms-2">contact@example.com</span></a></li>
-                                <li class="ms-2"><a href=""><span><i class="fa-solid fa-mobile-button text-danger"></i></span><span class="ms-2">+1 5589 55488 55</span></a></li>
+                                <li><a href=""><span><i class="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "EmailIcon").Value text-danger"></i></span><span class="ms-2">@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "EmailAdrress").Value</span></a></li>
+                                <li class="ms-2"><a href=""><span><i class="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "PhoneIcon").Value text-danger"></i></span><span class="ms-2">@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "Phone").Value</span></a></li>
                             </ul>
                         </div>
                         <div class="icons">
                             <ul class="d-flex justify-content-end">
-                                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-instagram-square"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-invision"></i></a></li>
+                                <li><a href="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "TwitterIcon").IconUrl"><i class="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "TwitterIcon").Value"></i></a></li>
+                                <li><a href="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "FacebookIcon").IconUrl"><i class="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "FacebookIcon").Value"></i></a></li>
+                                <li><a href="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "InstagramIcon").IconUrl"><i class="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "InstagramIcon").Value"></i></a></li>
+                                <li><a href="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "InvisionIcon").IconUrl"><i class="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "InvisionIcon").Value"></i></a></li>
                             </ul>
                         </div>
 
@@ -42,7 +67,7 @@
                         <div class="logo d-flex ">
                             <div class="red mt-1"></div>
                             <div class="logos">
-                                <h1 class="ms-2">ETERNA</h1>
+                                <h1 class="ms-2">@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "HeaderLogo").Value</h1>
                             </div>
                         </div>
                         <div class="bars">
@@ -109,8 +134,8 @@
                         United States
                     </p>
                     <h6 class="text-light" style="font-size: 12px;">
-                        Phone: +1 5589 55488 55 <br>
-                        Email: info@example.com
+                        Phone: @layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "Phone").Value <br>
+                        Email: @layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "EmailAdrress").Value
                     </h6>
                 </div>
                 <div class="useful mt-5 col-lg-3 col-md-6 col-sm-6 col-6">
@@ -120,10 +145,10 @@
                         Cras fermentum odio eu feugiat lide par naso <br> tierra. Justo eget nada terra videa magna derita <br> valies darta donna mare fermentum iaculis eu <br> non diam phasellus.
                     </p>
                     <div class="socalmedia">
-                        <i class="fa-brands fa-twitter text-light"></i>
-                        <i class="fa-brands fa-facebook text-light"></i>
-                        <i class="fa-brands fa-instagram-square text-light"></i>
-                        <i class="fa-brands fa-invision text-light"></i>
+                        <i class="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "TwitterIcon").Value text-light"></i>
+                        <i class="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "FacebookIcon").Value text-light"></i>
+                        <i class="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "InstagramIcon").Value text-light"></i>
+                        <i class="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "InvisionIcon").Value text-light"></i>
                     </div>
                 </div>
             </div>
@@ -135,6 +160,9 @@
             </div>
         </div>
     </footer>
+    <div class="arrow">
+        <i class="fa-solid fa-arrow-up text-center"></i>
+    </div>
     <script src="/assets/Js/script.js"></script>
 </body>
 </html>
