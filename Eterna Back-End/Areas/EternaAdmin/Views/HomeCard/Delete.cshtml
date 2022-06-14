@@ -1,0 +1,31 @@
+﻿@model HomeCard
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<div>
+    <div>
+        <p>Id: </p>
+        <h4>@Model.Id</h4>
+    </div>
+    <div>
+        <p>Icon: </p>
+        <h4>@Model.Icon</h4>
+    </div>
+    <div>
+        <p>Title: </p>
+        <h4>@Model.Title</h4>
+    </div>
+    <div>
+        <p>SubTitle: </p>
+        <h4>@Model.SubTitle</h4>
+    </div>
+    
+</div>
+<form method="post">
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Delete card</button>
+    </div>
+</form>

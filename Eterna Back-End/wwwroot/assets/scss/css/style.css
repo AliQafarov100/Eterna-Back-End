@@ -306,15 +306,212 @@ body .arrow i {
   border-radius: 2px;
 }
 
+#forSlider {
+  height: 450px;
+}
+
+#forSlider .slider-icon {
+  position: relative;
+}
+
+#forSlider .slider-icon i {
+  position: absolute;
+  top: 200px;
+  z-index: 10;
+  font-size: 30px;
+  color: gray;
+}
+
+#forSlider .slider-icon .fa-chevron-right {
+  right: 20px;
+}
+
+#forSlider .slider-icon .fa-chevron-left {
+  left: 20px;
+}
+
+#forSlider .slider {
+  width: 100%;
+}
+
+#forSlider .slider .items {
+  width: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  transition: .5s;
+  opacity: 0;
+  height: 450px;
+}
+
+#forSlider .slider .items .items-box {
+  margin: 75px auto;
+}
+
+#forSlider .slider .items .items-box button {
+  border: none;
+  background-color: #e96b56;
+  width: 150px;
+  height: 40px;
+  border-radius: 50px;
+  color: white;
+}
+
+#forSlider .slider .items .items-box button:hover {
+  background-color: white;
+  border: 1px solid #e96b56;
+}
+
+#forSlider .slider .items .items-box .point {
+  width: 50px;
+  margin: 0 auto;
+}
+
+#forSlider .slider .items .items-box .point .points {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+#forSlider .slider .items:nth-child(1) {
+  background-image: url(/assets/Image/Slider/slide-1.jpg);
+}
+
+#forSlider .slider .items:nth-child(2) {
+  background-image: url(/assets/Image/Slider/slide-2.jpg);
+}
+
+#forSlider .slider .items:nth-child(3) {
+  background-image: url(/assets/Image/Slider/slide-3.jpg);
+}
+
+#forSlider .slider .active {
+  opacity: 1;
+}
+
+#card-section {
+  position: relative;
+ 
+}
+
+#card-section .mini-card .card-property {
+  width: 90%;
+  height: 200px;
+  background-color: white;
+  padding: 25px;
+  transition: .8s;
+  box-shadow: 1px 1px 1px 1px  gray;
+  border-radius: 10px;
+}
+
+#card-section .mini-card .card-property p:first-of-type {
+  font-size: 25px;
+  color: #545454;
+}
+
+#card-section .mini-card .card-property p:last-child {
+  font-size: 12px;
+}
+
+#card-section .mini-card .card-property i {
+  font-size: 30px;
+  color: #e96b56;
+}
+
+#card-section .mini-card .card-property:hover {
+  background-color: #e96b56;
+}
+
+#card-section .mini-card .card-property:hover p {
+  color: white;
+}
+
+#card-section .mini-card .card-property:hover i {
+  color: white;
+}
+
+#ourCompany .about-image img {
+  width: 90%;
+  height: 300px;
+}
+
+#carousel img {
+  height: 70px;
+}
+
+#carousel .line {
+  width: 50px;
+  height: 3px;
+  background-color: #e96b56;
+  margin: 0px auto;
+}
+
+
+
+
+
+.gradient-custom-3 {
+    /* fallback for old browsers */
+    background: #84fab0;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+}
+
+.gradient-custom-4 {
+    /* fallback for old browsers */
+    background: #84fab0;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+}
+
+
+
+
+
+
 @media (min-width: 992px) {
   .bars {
     display: none;
   }
+  #card-section {
+    bottom: 120px;
+  }
+  #card-section .mini-card .card-property {
+    margin-top: 10px;
+  }
+  #carousel img {
+    width: 25%;
+    height: 30px;
+    opacity: .7;
+  }
+    #forSlider .slider .items{
+        background-size: 100%;
+    }
 }
 
 @media (max-width: 992px) {
   .services {
     display: none;
+  }
+  #card-section {
+    top: 0px;
+  }
+  #card-section .mini-card .card-property {
+    margin-top: 10px;
+  }
+  #carousel img {
+    width: 80%;
+    height: 20px;
+  }
+}
+
+@media (min-width: 730px) {
+  #forSlider .items-box {
+    width: 50%;
   }
 }
 
@@ -343,6 +540,9 @@ body .arrow i {
   .responsive-menu {
     width: 100%;
   }
+  #forSlider .items-box {
+    width: 80%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -351,6 +551,9 @@ body .arrow i {
   }
   #topbar .navbar-box-up {
     width: 100%;
+  }
+  #forSlider .items-box {
+    width: 80%;
   }
 }
 
@@ -372,6 +575,9 @@ body .arrow i {
   }
   .staticAndDesc .statistics-box .progressive {
     width: 100%;
+  }
+  #forSlider .items .items-box {
+    width: 80%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,38 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+<div>
+    <div>
+        <p>Id: </p>
+        <h4>@Model.Id</h4>
+    </div>
+    <div>
+        <p>Image: </p>
+        <img src="~/assets/Image/Slider/@Model.Image" />
+    </div>
+    <div>
+        <p>Title: </p>
+        <h4>@Model.Title</h4>
+    </div>
+    <div>
+        <p>Title Dedicated: </p>
+        <h4>@Model.TitleDedicated</h4>
+    </div>
+    <div>
+        <p>SubTitle: </p>
+        <h4>@Model.SubTitle</h4>
+    </div>
+    <div>
+        <p>Order: </p>
+        <h4>@Model.Order</h4>
+    </div>
+</div>
+
+<form method="post">
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Delete slider</button>
+    </div>
+</form>

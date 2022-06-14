@@ -1,0 +1,127 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+<main>
+    <section id="forSlider">
+        <div class="slider-icon">
+            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="slider">
+
+            @foreach (Slider slider in Model.Sliders)
+            {
+            <div class="items active" style="background-image: url(/assets/Image/Slider/@slider.Image)">
+                <div class="items-box text-center">
+                    <h1>@slider.Title <span class="text-danger">@slider.TitleDedicated</span></h1>
+                    <p>@slider.SubTitle</p>
+                    <button>Read More</button>
+                    <div class="point d-flex justify-content-around mt-5">
+                        <div class="points" data-id="1"></div>
+                        <div class="points" data-id="2"></div>
+                        <div class="points" data-id="3"></div>
+                    </div>
+                </div>
+            </div>
+            }
+
+        </div>
+    </section>
+    <section id="card-section">
+        <div class="container">
+            <div class="row justify-content-between">
+                @foreach (MiniCard miniCard in Model.MiniCards)
+                {
+                    <div class="mini-card col-lg-4">
+                        <div class="card-property">
+                            <i class="@miniCard.Icon"></i>
+                            <p class="mt-3">@miniCard.Title</p>
+                            <p>@miniCard.Description</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <section id="ourCompany">
+        <div class="container">
+            <div class="row">
+                <div class="about-image col-lg-5 col-md-12 col-sm-12 col-12">
+                    @foreach (AboutImage image in Model.AboutImages)
+                    {
+                        <img src="~/assets/Image/Home/@image.Image" alt="">
+                    }
+                </div>
+                <div class="image-desc col-lg-7 col-md-12 col-sm-12 col-12">
+
+                    @foreach (AboutMain main in Model.AboutMains)
+                    {
+                        <strong>@main.Main</strong>
+                    }
+
+                    @foreach (AboutDescript descript in Model.AboutDescripts)
+                    {
+                        <p class=""><span class="">@descript.Info</span></p>
+                    }
+                    @foreach (AboutToDoList toDoList in Model.AboutToDoLists)
+                    {
+                        <p class=""><span><i class="@toDoList.Icon text-danger text-center" style="width: 20px; height: 20px; border: 1px solid red; border-radius: 50%;"></i></span><span class="ms-2">@toDoList.Info</span></p>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="card">
+        <div class="container">
+            <div class="cart row justify-content-between  mt-5 text-center">
+                @foreach (HomeCard card in Model.HomeCards)
+                {
+                    <div class="cards col-lg-4 col-md-6 col-sm-12">
+                        <div class="property">
+                            <i class="@card.Icon"></i>
+                            <p class="bold mt-3">@card.Title</p>
+                            <p>@card.SubTitle</p>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </section>
+    <section id="carousel">
+        <div class="container mt-5">
+            <div class="skills mt-5 text-center">
+                <strong style="font-size: 25px; color: #545454;">Clients</strong>
+                <div class="line mt-4"></div>
+            </div>
+            <p class="mt-4">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <div class="owl-carousel owl-theme">
+                @foreach (Carousel carousel in Model.Carousels)
+                {
+                    <div class="item"><img src="~/assets/Image/Home/ForCarousel/@carousel.Image" alt=""></div>
+                }
+            </div>
+        </div>
+    </section>
+    <section id="subscribe" class="mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="box d-flex justify-content-between mt-5">
+                    <div class="description text-light col-sm-12 col-lg-6 col-md-12 col-12">
+                        <h4>Our Newsletter</h4>
+                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    </div>
+                    <div class="login col-sm-12 col-lg-6 col-md-12 col-12">
+                        <div class="label d-flex align-items-center">
+                            <input type="text" class="">
+                            <button class="w-25">Subscibe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+

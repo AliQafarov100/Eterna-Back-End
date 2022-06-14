@@ -1,0 +1,22 @@
+﻿@model AnotherSetting
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form method="post">
+    <div>
+        <label>Icon: </label>
+        <input asp-for="Key" type="text" class="form-control" />
+        <span asp-validation-for="Key" class="text-dandger"></span>
+    </div>
+    <div>
+        <label>Title: </label>
+        <input asp-for="Value" type="text" class="form-control" />
+        <span asp-validation-for="Value" class="text-dandger"></span>
+    </div>
+ 
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Create card</button>
+    </div>
+</form>
+

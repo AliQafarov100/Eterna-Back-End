@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Card table</h4>
+            <p class="card-description">
+                Add class <code>.table-dark</code>
+            </p>
+            <a asp-controller="Phone" asp-action="Create" style="color:white;font-size:20px" class="mb-3 btn btn-success">Create slider</a>
+            <div class="table-responsive pt-3">
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th>
+                                Icon
+                            </th>
+                            <th>
+                                Number
+                            </th>
+                            <th>
+                                Settings
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                @layoutservice.GetDatas().Result.FirstOrDefault(i => i.Key == "PhoneIcon").Value
+                            </td>
+                            <td>
+                                @layoutservice.GetDatas().Result.FirstOrDefault(n => n.Key == "Phone").Value
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="Detail">
+                                        <a class="btn btn-success" asp-controller="Phone" asp-action="Detail" asp-route-id="@layoutservice.GetDatas().Result.FirstOrDefault(n => n.Key == "Phone").Id,@layoutservice.GetDatas().Result.FirstOrDefault(i => i.Key == "PhoneIcon").Id">
+                                            <i class="mdi mdi-details"></i>
+                                        </a>
+                                    </div>
+                                    <div class="Edit">
+                                        <a class="btn btn-primary" asp-controller="Phone" asp-action="Edit" asp-route-id="@layoutservice.GetDatas().Result.FirstOrDefault(n => n.Key == "Phone").Id,@layoutservice.GetDatas().Result.FirstOrDefault(i => i.Key == "PhoneIcon").Id">
+                                            <i class="mdi mdi-tooltip-edit"></i>
+                                        </a>
+                                    </div>
+                                    <div class="Delete">
+                                        <a class="btn btn-danger" asp-controller="Phone" asp-action="Delete" asp-route-id="@layoutservice.GetDatas().Result.FirstOrDefault(n => n.Key == "Phone").Id,@layoutservice.GetDatas().Result.FirstOrDefault(i => i.Key == "PhoneIcon").Id">
+                                            <i class="mdi mdi-delete-forever"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

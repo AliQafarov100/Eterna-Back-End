@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="/assets/Bootstrap/js/bootstrap.min.js">
     <link rel="stylesheet" href="/assets/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/assets/scss/css/style.css">
+    <link rel="stylesheet" href="/assets/scss/css/owl.carousel.css">
+
+
     <title>Document</title>
 </head>
 <body>
@@ -45,6 +50,7 @@
                             <ul class="d-flex justify-content-between col-sm-12 col-12">
                                 <li><a href=""><span><i class="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "EmailIcon").Value text-danger"></i></span><span class="ms-2">@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "EmailAdrress").Value</span></a></li>
                                 <li class="ms-2"><a href=""><span><i class="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "PhoneIcon").Value text-danger"></i></span><span class="ms-2">@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "Phone").Value</span></a></li>
+                                <li class="ms-2"><a href=""><span><i class="@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "PhoneIcon").Value text-danger"></i></span><span class="ms-2">@layuotservice.GetDatas().Result.FirstOrDefault(s => s.Key == "Second Phone").Value</span></a></li>
                             </ul>
                         </div>
                         <div class="icons">
@@ -75,9 +81,9 @@
                         </div>
                         <div class="services">
                             <ul class="d-flex justify-content-around">
-                                <li><a href="">Home</a> </li>
+                                <li><a asp-controller="Home" asp-action="Index">Home</a> </li>
                                 <li><a href="">About</a> </li>
-                                <li><a href="">Services</a> </li>
+                                <li><a asp-controller="Service" asp-action="Index">Services</a> </li>
                                 <li><a href="">Portfolio</a> </li>
                                 <li><a href="">Team</a> </li>
                                 <li><a href="">Pricing</a> </li>
@@ -163,6 +169,10 @@
     <div class="arrow">
         <i class="fa-solid fa-arrow-up text-center"></i>
     </div>
-    <script src="/assets/Js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/assets/Js/homeScript.js"></script>
+    <script src="~/assets/Js/script.js"></script>
+
 </body>
 </html>

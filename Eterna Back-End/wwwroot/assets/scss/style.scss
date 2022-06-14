@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+// Service Css Design Start
 .responsive-menu{
     position: absolute;
     top: 100px;
@@ -350,12 +352,190 @@ body{
         }
     }
 }
+// Service Css Design the end
 
+// Home Css Design start
+
+#forSlider{
+    height: 450px;
+
+    .slider-icon{
+        position: relative;
+         i{
+             position: absolute;
+             top: 200px;
+             z-index: 10;
+             font-size: 30px;
+             color: gray;
+         }
+         .fa-chevron-right{
+              right: 20px;
+         }
+         .fa-chevron-left{
+            left: 20px;
+         }
+         
+     }
+    .slider{
+        width: 100%;
+        
+
+        .items{
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            transition: .5s;
+            opacity: 0;
+            height: 450px;
+            
+
+            .items-box{
+                
+                margin: 75px auto;
+            
+                button{
+                    border: none;
+                    background-color: #e96b56;
+                    width: 150px;
+                    height: 40px;
+                    border-radius: 50px;
+                    color: white;
+
+                    &:hover{
+                        background-color: white;
+                        border: 1px solid #e96b56;
+                    }
+                }
+
+                .point{
+                  width: 50px;
+                  margin: 0 auto;
+                  
+                    .points{
+                        
+                        width: 10px;
+                        height: 10px;
+                        background-color: gray;
+                        border-radius: 50%;
+                        
+                    }
+                }
+            }
+        }
+        .items:nth-child(1){
+            background-image: url(/assets/Image/Slider/slide-1.jpg);
+        }
+        .items:nth-child(2){
+            background-image: url(/assets/Image/Slider/slide-2.jpg);
+        }
+        .items:nth-child(3){
+            background-image: url(/assets/Image/Slider/slide-3.jpg);
+        }
+        .active{
+            opacity: .7;
+        }
+
+    }
+}
+
+#card-section{
+    position: relative;
+    bottom: 110px;
+
+    .mini-card{
+        
+
+        .card-property{
+            width: 90%;
+            height: 200px;
+            background-color: white;
+            padding: 25px;
+            transition: .8s;
+            
+            
+            box-shadow: 1px 1px 1px 1px  gray;
+            border-radius: 10px;
+
+            p:first-of-type{
+                font-size: 25px;
+                color: rgb(84, 84, 84);
+            }
+            
+            p:last-child{
+                font-size: 12px;
+            }
+
+
+            i{
+                
+                font-size: 30px;
+                color: #e96b56;
+            }
+
+            &:hover{
+                background-color: #e96b56;
+
+                p{
+                    color: white;
+                }
+                i{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+#ourCompany{
+   
+
+    .about-image{
+        
+
+        img{
+            width: 90%;
+            height: 300px;
+        }
+    }
+}
+
+#carousel{
+
+    img{
+        height: 70px;
+    }
+
+    .line{
+        width: 50px;
+        height: 3px;
+        background-color: #e96b56;
+        margin: 0px auto;
+    }
+}
 
 @media (min-width: 992px) {
 
     .bars{
         display: none;
+    }
+   
+    #card-section{
+       bottom: 100px;
+
+        .mini-card{
+            .card-property{
+                margin-top: 10px;
+            }
+        }
+    }
+    
+    #carousel{
+
+        img{
+            width: 25%;
+            height: 30px;
+            opacity: .7;
+        }
     }
 }
 @media (max-width: 992px) {
@@ -363,11 +543,31 @@ body{
     .services{
         display: none;
     }
-}
+    
+    #card-section{
+        top: 0px;
+ 
+         .mini-card{
+             .card-property{
+                 margin-top: 10px;
+             }
+         }
+     }
+   
+    #carousel{
 
+        img{
+            width: 80%;
+            height: 20px;
+        }
+    }
+}
 @media (min-width: 730px){
-     .responsive-menu{
-        
+    #forSlider{
+
+        .items-box{
+           width: 50%;
+         }
      }
 }
 @media (max-width: 730px){
@@ -401,6 +601,13 @@ body{
         .responsive-menu{
             width: 100%;
         }
+
+        #forSlider{
+
+           .items-box{
+              width: 80%;
+            }
+        }
     }
     
    
@@ -413,7 +620,12 @@ body{
         .navbar-box-up{
             width: 100%;
         }
-    }
+    }#forSlider{
+        
+        .items-box{
+           width: 80%;
+         }
+     }
 }
 
 @media (max-width: 350px)  {
@@ -441,5 +653,13 @@ body{
                 width: 100%;
             }
         }
+    }
+    #forSlider{
+        .items{
+           
+            .items-box{
+                width: 80%; 
+            }
+        }  
     }
 }

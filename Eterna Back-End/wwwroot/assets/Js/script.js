@@ -1,4 +1,3 @@
-let arrow = document.querySelector(".arrow");
 let menu = document.querySelector(".responsive-menu");
 let clickBar = document.querySelector(".fa-bars");
 let deletebar = document.querySelector(".fa-x");

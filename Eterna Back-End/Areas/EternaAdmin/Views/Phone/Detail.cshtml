@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>Detail</h1>
+<div>
+    <div>
+        <p>Icon: </p>
+        <h4>@layoutservice.GetDatas().Result.FirstOrDefault(i => i.Key == "PhoneIcon").Value</h4>
+    </div>
+    <div>
+        <p>Number: </p>
+        <h4>@layoutservice.GetDatas().Result.FirstOrDefault(n => n.Key == "Phone").Value</h4>
+    </div>
+</div>
+
